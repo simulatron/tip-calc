@@ -60,25 +60,25 @@
         }
 
         .section-separator{
-        	margin-top: 64px;
+        	margin-top: 56px;
         }
 
-		.mdl-card__supporting-text h6{
-			color: #E53935;
+		.mdl-card__supporting-text p{
+			color: #455A64;
 		}
 
 		.mdl-layout__header{
-			background-color: #B71C1C;
+			background-color: #455A64;
 		}
 
 		.mdl-card__media{
 			box-sizing: border-box;
 			background-size: cover;
-			background-color: #E53935;
+			background-color: #455A64;
 			padding: 24px;
 		}
 
-		.mdl-card__media h5{
+		.mdl-card__media h6{
 			font-weight: bold;
 		}
 
@@ -87,7 +87,7 @@
 		}
 
 		.mdl-card__supporting-text button{
-			background: #E53935;
+			background: #455A64;
 			width: 100%;
 		}
 
@@ -106,7 +106,7 @@
 		}
 
 		.mdl-text-field label{
-			color: #E53935;
+			color: #455A64;
 		}
 
 		.calc{
@@ -161,51 +161,51 @@
     	<div class="tip-app-page mdl-grid card-container">
     		<div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
     			<div class="mdl-card__media mdl-color-text--grey-50">
-    				<h5>Without Tax</h5>
+    				<h6>Without Tax</h6>
     				<div class="calc">
     					<div>
-							<h6>Tip</h6>
+							<p>Tip</p>
 						</div>
 						<div class="section-spacer"></div>
 						<div>
-					    	<h2 id="tipTotalWithoutTax">0</h2>
+					    	<h4 id="tipTotalWithoutTax">0</h4>
 						</div>
 					</div>
 					<div class="calc">
 						<div>
-					    	<h6>Overall Total</h6>
+					    	<p>Overall Total</p>
 					    </div>
 					    <div class="section-spacer"></div>
 					    <div>
-				    		<h2 id="calcTotalWithoutTax">0</h2>
+				    		<h4 id="calcTotalWithoutTax">0</h4>
 				    	</div>
     				</div>
 
-    				<h5>With Tax</h5>
+    				<h6>With Tax</h6>
     				<div class="calc">
     					<div>
-							<h6>Tip</h6>
+							<p>Tip</p>
 						</div>
 						<div class="section-spacer"></div>
 						<div>
-					    	<h2 id="tipTotalWithTax">0</h2>
+					    	<h4 id="tipTotalWithTax">0</h4>
 						</div>
 					</div>
 					<div class="calc">
 						<div>
-					    	<h6>Overall Total</h6>
+					    	<p>Overall Total</p>
 					    </div>
 					    <div class="section-spacer"></div>
 					    <div>
-					    	<h2 id="calcTotalWithTax">0</h2>
+					    	<h4 id="calcTotalWithTax">0</h4>
 					    </div>
     				</div>			    	
     			</div>
     			<div class="mdl-card__supporting-text mdl-color-text--grey-600">
-				    <h6>Tax Amount</h6>
+				    <p>Tax Amount</p>
 				    <h4 id="taxAmount">0</h4>
 				    	<div id="bill-total" class="section-separator">
-					        <h6>Step 1) Input your the bill on your recipt</h6>
+					        <p>Step 1) Input the bill on your recipt</p>
 					        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 								<input id="accumulatedTotal" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" value="22.60"/>
 								<label class="mdl-textfield__label" for="accumunlatedTotal" >Number...</label>
@@ -217,7 +217,7 @@
 						</div>
 
 						<div class="section-separator">
-					        <h6>Step 2) Input the sales tax for your current location</h6>
+					        <p>Step 2) Input the sales tax for your current location</p>
 					        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 								<input id="tax" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" value="13"/>
 								<label class="mdl-textfield__label" for="tax">Number...</label>
@@ -226,7 +226,7 @@
 						</div>
 
 						<div class="section-separator">
-					        <h6>Step 3) Input the amount of tip you wish to give</h6>
+					        <p>Step 3) Input the amount of tip you wish to give</p>
 							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 								<input id="tip" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" value="15"/>
 								<label class="mdl-textfield__label" for="tip">Number...</label>
@@ -235,7 +235,7 @@
 					        <input id="tipSlider" class="mdl-slider mdl-js-slider" type="range" min="10" max="30" value="15" tabindex="0"/>
 					    </div>
 					    <div class="section-separator">
-						    <h6>Step 4) The # of people you want to split the bill with</h6>
+						    <p>Step 4) The # of people you want to split the bill with</p>
 							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 								<input id="numOfPeople" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" value="1"/>
 								<label class="mdl-textfield__label" for="numOfPeople">Number...</label>

@@ -101,6 +101,11 @@ window.onload = function(){
     	mainAudio: './music/elevator.mp3',
     	endAudio: './music/ding.mp3'
 	});
+    if(elevator){
+        console.log("elevator creacted");
+    }else{
+        console.log("oh no");
+    }
 }
 
 document.getElementById('tax').oninput = function(event) {
