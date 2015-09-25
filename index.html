@@ -2,270 +2,267 @@
 <html lang="">
 
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Carl Sim">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="./bower_components/material-design-lite/material.min.css">
-	<script src="./bower_components/material-design-lite/material.min.js"></script>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-	<script src="js/elevator.js"></script>
-
-	<title>CalcuTip</title>
-
-	<style>
-		body {
-		  /*background-image: url('../images/bg2.jpg');*/
-		  font-family: 'Roboto', 'Helvetica', sans-serif;
-		  color: #616161;
-		  /* FIXME: Temp. workaround for vertical scrollbars */
-		  -webkit-transition: opacity 2s ease-in;
-		    -moz-transition: opacity 2s ease-in;
-		    -o-transition: opacity 2s ease-in;
-		    -ms-transition: opacity 2s ease-in;
-		    transition: opacity 2s ease-in;
-		    height: 100%;
-		}
-		/******
+    <script src="./bower_components/material-design-lite/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="js/elevator.js"></script>
+    <title>CalcuTip</title>
+    <style>
+    body {
+        /*background-image: url('../images/bg2.jpg');*/
+        font-family: 'Roboto', 'Helvetica', sans-serif;
+        color: #616161;
+        /* FIXME: Temp. workaround for vertical scrollbars */
+        -webkit-transition: opacity 2s ease-in;
+        -moz-transition: opacity 2s ease-in;
+        -o-transition: opacity 2s ease-in;
+        -ms-transition: opacity 2s ease-in;
+        transition: opacity 2s ease-in;
+        height: 100%;
+    }
+    /******
 		*
 		* Containers
 		*
 		*******/
-
-		.wide-container{
-		  max-width: 1080px;
-		  margin: 0 auto;
-		}
-
-		.container{
-		  max-width: 950px;
-		  margin: 0 auto;
-		}
-
-		.card-container{
-		  max-width: 512px;
-		  margin: 16px auto;
-		}
-
-		/*****
+    
+    .wide-container {
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+    
+    .container {
+        max-width: 950px;
+        margin: 0 auto;
+    }
+    
+    .card-container {
+        max-width: 512px;
+        margin: 16px auto;
+    }
+    /*****
 		*
 		*
 		*
 		******/
-
-		.section-spacer {
-          flex-grow: 1;
-        }
-
-        .section-separator{
-        	margin-top: 56px;
-        }
-
-		.mdl-card__supporting-text p{
-			color: #455A64;
-		}
-
-		.mdl-layout__header{
-			background-color: #455A64;
-		}
-
-		.mdl-card__media{
-			box-sizing: border-box;
-			background-size: cover;
-			background-color: #455A64;
-			padding: 24px;
-		}
-
-		.mdl-card__media h6{
-			font-weight: bold;
-		}
-
-		.mdl-card__actions{
-			padding: 0;
-		}
-
-		.mdl-card__supporting-text button{
-			background: #455A64;
-			width: 100%;
-		}
-
-		.mdl-card__supporting-text{
-          width: 100%;
-          padding: 16px;
-          box-sizing: border-box;
-        }
-
-		.mdl-mini-footer{
-		  margin-top: 100px;
-		  padding-bottom: 100px;
-		  align-items: center;
-		  background-color: #EEEEEE;
-		  box-sizing: border-box;
-		}
-
-		.mdl-text-field label{
-			color: #455A64;
-		}
-
-		.calc{
-			box-sizing: border-box;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: flex-start;
-			height: auto;
-		}
-
-		.social-btn {
-		  background-position: center;
-		  background-size: contain;
-		  background-repeat: no-repeat;
-		  background-color: transparent;
-		  margin: 0 16px;
-		  width: 24px;
-		  height: 24px;
-		  cursor: pointer;
-		  opacity: 0.46;
-		  border-radius: 2px;
-		}
-		.social-btn__twitter {
-		  background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_twitter_black_24dp.png');
-		}
-		.social-btn__blogger {
-		  background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_facebook_black_24dp.png');
-		}
-		.social-btn__gplus {
-		  background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_gplus_black_24dp.png');
-		}
-		.social-btn__share {
-		  color: rgba(0, 0, 0, 0.54);
-		  background: transparent;
-		}
-	</style>
+    
+    .section-spacer {
+        flex-grow: 1;
+    }
+    
+    .section-separator {
+        margin-top: 56px;
+    }
+    
+    .mdl-card__supporting-text p {
+        color: #455A64;
+    }
+    
+    .mdl-layout__header {
+        background-color: #455A64;
+    }
+    
+    .mdl-card__media {
+        box-sizing: border-box;
+        background-size: cover;
+        background-color: #455A64;
+        padding: 24px;
+    }
+    
+    .mdl-card__media h6 {
+        font-weight: bold;
+    }
+    
+    .mdl-card__actions {
+        padding: 0;
+    }
+    
+    .mdl-card__supporting-text button {
+        background: #455A64;
+        width: 100%;
+    }
+    
+    .mdl-card__supporting-text {
+        width: 100%;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+    
+    .mdl-mini-footer {
+        margin-top: 100px;
+        padding-bottom: 100px;
+        align-items: center;
+        background-color: #EEEEEE;
+        box-sizing: border-box;
+    }
+    
+    .mdl-text-field label {
+        color: #455A64;
+    }
+    
+    .calc {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        height: auto;
+    }
+    
+    .social-btn {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        margin: 0 16px;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        opacity: 0.46;
+        border-radius: 2px;
+    }
+    
+    .social-btn__twitter {
+        background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_twitter_black_24dp.png');
+    }
+    
+    .social-btn__blogger {
+        background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_facebook_black_24dp.png');
+    }
+    
+    .social-btn__gplus {
+        background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_gplus_black_24dp.png');
+    }
+    
+    .social-btn__share {
+        color: rgba(0, 0, 0, 0.54);
+        background: transparent;
+    }
+    </style>
 </head>
 
 <body>
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-	<header class="mdl-layout__header mdl-layout__header--scroll">
-	    <div class="mdl-layout__header-row">
-	      <!-- Title -->
-	      <span class="mdl-layout-title">Tipping Calculator</span>
-	      <!-- Add spacer, to align navigation to the right -->
-	      <div class="mdl-layout-spacer"></div>
-	      <!-- Navigation. We hide it in small screens. -->
-	    </div>
-	</header>
-    <main id="top" class="mdl-layout__content">
-    	<div class="tip-app-page mdl-grid card-container">
-    		<div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
-    			<div class="mdl-card__media mdl-color-text--grey-50">
-    				<h6>Without Tax</h6>
-    				<div class="calc">
-    					<div>
-							<p>Tip</p>
-						</div>
-						<div class="section-spacer"></div>
-						<div>
-					    	<h4 id="tipTotalWithoutTax">0</h4>
-						</div>
-					</div>
-					<div class="calc">
-						<div>
-					    	<p>Overall Total</p>
-					    </div>
-					    <div class="section-spacer"></div>
-					    <div>
-				    		<h4 id="calcTotalWithoutTax">0</h4>
-				    	</div>
-    				</div>
-
-    				<h6>With Tax</h6>
-    				<div class="calc">
-    					<div>
-							<p>Tip</p>
-						</div>
-						<div class="section-spacer"></div>
-						<div>
-					    	<h4 id="tipTotalWithTax">0</h4>
-						</div>
-					</div>
-					<div class="calc">
-						<div>
-					    	<p>Overall Total</p>
-					    </div>
-					    <div class="section-spacer"></div>
-					    <div>
-					    	<h4 id="calcTotalWithTax">0</h4>
-					    </div>
-    				</div>			    	
-    			</div>
-    			<div class="mdl-card__supporting-text mdl-color-text--grey-600">
-				    <p>Tax Amount</p>
-				    <h4 id="taxAmount">0</h4>
-				    	<div id="bill-total" class="section-separator">
-					        <p>Step 1) Input the bill on your recipt</p>
-					        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-								<input id="accumulatedTotal" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" value="22.60"/>
-								<label class="mdl-textfield__label" for="accumunlatedTotal" >Number...</label>
-								<span class="mdl-textfield__error">Input is not a number!</span>
-							</div>
-						</div>
-						<div class="mdl-tooltip mdl-tooltip--large" for="bill-total">
-							Test
-						</div>
-
-						<div class="section-separator">
-					        <p>Step 2) Input the sales tax for your current location</p>
-					        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-								<input id="tax" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" value="13"/>
-								<label class="mdl-textfield__label" for="tax">Number...</label>
-								<span class="mdl-textfield__error">Input is not a number!</span>
-							</div>
-						</div>
-
-						<div class="section-separator">
-					        <p>Step 3) Input the amount of tip you wish to give</p>
-							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-								<input id="tip" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" value="15"/>
-								<label class="mdl-textfield__label" for="tip">Number...</label>
-								<span class="mdl-textfield__error">Input is not a number!</span>
-							</div>
-					        <input id="tipSlider" class="mdl-slider mdl-js-slider" type="range" min="10" max="30" value="15" tabindex="0"/>
-					    </div>
-					    <div class="section-separator">
-						    <p>Step 4) The # of people you want to split the bill with</p>
-							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-								<input id="numOfPeople" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" value="1"/>
-								<label class="mdl-textfield__label" for="numOfPeople">Number...</label>
-								<span class="mdl-textfield__error">Input is not a number!</span>
-							</div>
-						    <input id="tip-numofpeople--slider" class="mdl-slider mdl-js-slider" type="range" min="1" max="15" value="1" tabindex="0"/>
-						</div>
-						<div class="section-separator">
-							<a href="#top" class="elevator-button">
-								<button id="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Let's See Your Bill</button>
-							</a>
-						</div>
-				</div>
-			</div>
-	    </div>
-	<footer class="mdl-mini-footer">
-        <div class="mdl-mini-footer__left-section">
-          &copy; 2015 Carl Sim
-        </div>
-        <div class="mdl-mini-footer__right-section">
-          <a href="https://twitter.com/carlsimcity" target="_blank">
-            <button class="mdl-mini-footer__social-btn social-btn social-btn__twitter"></button>
-          </a>
-          <a href="https://plus.google.com/+CarlSim/posts" target="_blank">
-            <button class="mdl-mini-footer__social-btn social-btn social-btn__gplus"></button>
-          </a>
-        </div>
-      </footer>
-    </main>
-</div>
-<script src="js/tip.js"></script>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--scroll">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Tipping Calculator</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation. We hide it in small screens. -->
+            </div>
+        </header>
+        <main id="top" class="mdl-layout__content">
+            <div class="tip-app-page mdl-grid card-container">
+                <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+                    <div class="mdl-card__media mdl-color-text--grey-50">
+                        <h6>Without Tax</h6>
+                        <div class="calc">
+                            <div>
+                                <p>Tip</p>
+                            </div>
+                            <div class="section-spacer"></div>
+                            <div>
+                                <h4 id="tipTotalWithoutTax">0</h4>
+                            </div>
+                        </div>
+                        <div class="calc">
+                            <div>
+                                <p>Overall Total</p>
+                            </div>
+                            <div class="section-spacer"></div>
+                            <div>
+                                <h4 id="calcTotalWithoutTax">0</h4>
+                            </div>
+                        </div>
+                        <h6>With Tax</h6>
+                        <div class="calc">
+                            <div>
+                                <p>Tip</p>
+                            </div>
+                            <div class="section-spacer"></div>
+                            <div>
+                                <h4 id="tipTotalWithTax">0</h4>
+                            </div>
+                        </div>
+                        <div class="calc">
+                            <div>
+                                <p>Overall Total</p>
+                            </div>
+                            <div class="section-spacer"></div>
+                            <div>
+                                <h4 id="calcTotalWithTax">0</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+                        <p>Tax Amount</p>
+                        <h4 id="taxAmount">0</h4>
+                        <div id="bill-total" class="section-separator">
+                            <p>Step 1) Input the bill on your recipt</p>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input id="accumulatedTotal" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" value="22.60" />
+                                <label class="mdl-textfield__label" for="accumunlatedTotal">Number...</label>
+                                <span class="mdl-textfield__error">Input is not a number!</span>
+                            </div>
+                        </div>
+                        <div class="mdl-tooltip mdl-tooltip--large" for="bill-total">
+                            Test
+                        </div>
+                        <div class="section-separator">
+                            <p>Step 2) Input the sales tax for your current location</p>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input id="tax" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" value="13" />
+                                <label class="mdl-textfield__label" for="tax">Number...</label>
+                                <span class="mdl-textfield__error">Input is not a number!</span>
+                            </div>
+                        </div>
+                        <div class="section-separator">
+                            <p>Step 3) Input the amount of tip you wish to give</p>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input id="tip" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" value="15" />
+                                <label class="mdl-textfield__label" for="tip">Number...</label>
+                                <span class="mdl-textfield__error">Input is not a number!</span>
+                            </div>
+                            <input id="tipSlider" class="mdl-slider mdl-js-slider" type="range" min="10" max="30" value="15" tabindex="0" />
+                        </div>
+                        <div class="section-separator">
+                            <p>Step 4) The # of people you want to split the bill with</p>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input id="numOfPeople" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" value="1" />
+                                <label class="mdl-textfield__label" for="numOfPeople">Number...</label>
+                                <span class="mdl-textfield__error">Input is not a number!</span>
+                            </div>
+                            <input id="tip-numofpeople--slider" class="mdl-slider mdl-js-slider" type="range" min="1" max="15" value="1" tabindex="0" />
+                        </div>
+                        <div class="section-separator">
+                            <a href="#top" class="elevator-button">
+                                <button id="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Let's See Your Bill</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    &copy; 2015 Carl Sim
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <a href="https://twitter.com/carlsimcity" target="_blank">
+                        <button class="mdl-mini-footer__social-btn social-btn social-btn__twitter"></button>
+                    </a>
+                    <a href="https://plus.google.com/+CarlSim/posts" target="_blank">
+                        <button class="mdl-mini-footer__social-btn social-btn social-btn__gplus"></button>
+                    </a>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="js/tip.js"></script>
 </body>
+
 </html>
